@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		47029F6D1AD6C7C2004A5934 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47029F6C1AD6C7C2004A5934 /* AppDelegate.swift */; };
+		47029F741AD6C7C2004A5934 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47029F731AD6C7C2004A5934 /* Images.xcassets */; };
+		47029F771AD6C7C2004A5934 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47029F751AD6C7C2004A5934 /* LaunchScreen.xib */; };
+		47029F831AD6C7C2004A5934 /* EJCardLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47029F821AD6C7C2004A5934 /* EJCardLayoutTests.swift */; };
+		47029F9B1AD6C7DC004A5934 /* LSCollectionViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 47029F8E1AD6C7DC004A5934 /* LSCollectionViewHelper.m */; };
+		47029F9C1AD6C7DC004A5934 /* LSCollectionViewLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 47029F901AD6C7DC004A5934 /* LSCollectionViewLayoutHelper.m */; };
+		47029F9D1AD6C7DC004A5934 /* MTCardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 47029F921AD6C7DC004A5934 /* MTCardLayout.m */; };
+		47029F9E1AD6C7DC004A5934 /* MTCollectionViewCardLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 47029F941AD6C7DC004A5934 /* MTCollectionViewCardLayoutHelper.m */; };
+		47029F9F1AD6C7DC004A5934 /* UICollectionView+CardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 47029F961AD6C7DC004A5934 /* UICollectionView+CardLayout.m */; };
+		47029FA01AD6C7DC004A5934 /* UICollectionView+Draggable.m in Sources */ = {isa = PBXBuildFile; fileRef = 47029F981AD6C7DC004A5934 /* UICollectionView+Draggable.m */; };
+		47029FA51AD6C83A004A5934 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47029FA21AD6C83A004A5934 /* CardCell.swift */; };
+		47029FA61AD6C83A004A5934 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47029FA31AD6C83A004A5934 /* SearchViewController.swift */; };
+		47029FA71AD6C83A004A5934 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47029FA41AD6C83A004A5934 /* ViewController.swift */; };
+		47029FA91AD6C846004A5934 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47029FA81AD6C846004A5934 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		47029F7D1AD6C7C2004A5934 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47029F5F1AD6C7C2004A5934 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47029F661AD6C7C2004A5934;
+			remoteInfo = EJCardLayout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		47029F671AD6C7C2004A5934 /* EJCardLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EJCardLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47029F6B1AD6C7C2004A5934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47029F6C1AD6C7C2004A5934 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		47029F731AD6C7C2004A5934 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		47029F761AD6C7C2004A5934 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		47029F7C1AD6C7C2004A5934 /* EJCardLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EJCardLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		47029F811AD6C7C2004A5934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47029F821AD6C7C2004A5934 /* EJCardLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EJCardLayoutTests.swift; sourceTree = "<group>"; };
+		47029F8C1AD6C7DB004A5934 /* EJCardLayout-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EJCardLayout-Bridging-Header.h"; sourceTree = "<group>"; };
+		47029F8D1AD6C7DC004A5934 /* LSCollectionViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCollectionViewHelper.h; sourceTree = "<group>"; };
+		47029F8E1AD6C7DC004A5934 /* LSCollectionViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCollectionViewHelper.m; sourceTree = "<group>"; };
+		47029F8F1AD6C7DC004A5934 /* LSCollectionViewLayoutHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCollectionViewLayoutHelper.h; sourceTree = "<group>"; };
+		47029F901AD6C7DC004A5934 /* LSCollectionViewLayoutHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCollectionViewLayoutHelper.m; sourceTree = "<group>"; };
+		47029F911AD6C7DC004A5934 /* MTCardLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCardLayout.h; sourceTree = "<group>"; };
+		47029F921AD6C7DC004A5934 /* MTCardLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCardLayout.m; sourceTree = "<group>"; };
+		47029F931AD6C7DC004A5934 /* MTCollectionViewCardLayoutHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCollectionViewCardLayoutHelper.h; sourceTree = "<group>"; };
+		47029F941AD6C7DC004A5934 /* MTCollectionViewCardLayoutHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCollectionViewCardLayoutHelper.m; sourceTree = "<group>"; };
+		47029F951AD6C7DC004A5934 /* UICollectionView+CardLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+CardLayout.h"; sourceTree = "<group>"; };
+		47029F961AD6C7DC004A5934 /* UICollectionView+CardLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+CardLayout.m"; sourceTree = "<group>"; };
+		47029F971AD6C7DC004A5934 /* UICollectionView+Draggable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+Draggable.h"; sourceTree = "<group>"; };
+		47029F981AD6C7DC004A5934 /* UICollectionView+Draggable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+Draggable.m"; sourceTree = "<group>"; };
+		47029F991AD6C7DC004A5934 /* UICollectionViewDataSource_Draggable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewDataSource_Draggable.h; sourceTree = "<group>"; };
+		47029F9A1AD6C7DC004A5934 /* UICollectionViewLayout_Warpable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewLayout_Warpable.h; sourceTree = "<group>"; };
+		47029FA21AD6C83A004A5934 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		47029FA31AD6C83A004A5934 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		47029FA41AD6C83A004A5934 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		47029FA81AD6C846004A5934 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		47029F641AD6C7C2004A5934 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47029F791AD6C7C2004A5934 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		47029F5E1AD6C7C2004A5934 = {
+			isa = PBXGroup;
+			children = (
+				47029F691AD6C7C2004A5934 /* EJCardLayout */,
+				47029F7F1AD6C7C2004A5934 /* EJCardLayoutTests */,
+				47029F681AD6C7C2004A5934 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		47029F681AD6C7C2004A5934 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				47029F671AD6C7C2004A5934 /* EJCardLayout.app */,
+				47029F7C1AD6C7C2004A5934 /* EJCardLayoutTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		47029F691AD6C7C2004A5934 /* EJCardLayout */ = {
+			isa = PBXGroup;
+			children = (
+				47029FA11AD6C7E3004A5934 /* CardLayout */,
+				47029F6C1AD6C7C2004A5934 /* AppDelegate.swift */,
+				47029FA21AD6C83A004A5934 /* CardCell.swift */,
+				47029FA31AD6C83A004A5934 /* SearchViewController.swift */,
+				47029FA41AD6C83A004A5934 /* ViewController.swift */,
+				47029F731AD6C7C2004A5934 /* Images.xcassets */,
+				47029FA81AD6C846004A5934 /* Main.storyboard */,
+				47029F751AD6C7C2004A5934 /* LaunchScreen.xib */,
+				47029F6A1AD6C7C2004A5934 /* Supporting Files */,
+				47029F8C1AD6C7DB004A5934 /* EJCardLayout-Bridging-Header.h */,
+			);
+			path = EJCardLayout;
+			sourceTree = "<group>";
+		};
+		47029F6A1AD6C7C2004A5934 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47029F6B1AD6C7C2004A5934 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		47029F7F1AD6C7C2004A5934 /* EJCardLayoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				47029F821AD6C7C2004A5934 /* EJCardLayoutTests.swift */,
+				47029F801AD6C7C2004A5934 /* Supporting Files */,
+			);
+			path = EJCardLayoutTests;
+			sourceTree = "<group>";
+		};
+		47029F801AD6C7C2004A5934 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47029F811AD6C7C2004A5934 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		47029FA11AD6C7E3004A5934 /* CardLayout */ = {
+			isa = PBXGroup;
+			children = (
+				47029F8D1AD6C7DC004A5934 /* LSCollectionViewHelper.h */,
+				47029F8E1AD6C7DC004A5934 /* LSCollectionViewHelper.m */,
+				47029F8F1AD6C7DC004A5934 /* LSCollectionViewLayoutHelper.h */,
+				47029F901AD6C7DC004A5934 /* LSCollectionViewLayoutHelper.m */,
+				47029F911AD6C7DC004A5934 /* MTCardLayout.h */,
+				47029F921AD6C7DC004A5934 /* MTCardLayout.m */,
+				47029F931AD6C7DC004A5934 /* MTCollectionViewCardLayoutHelper.h */,
+				47029F941AD6C7DC004A5934 /* MTCollectionViewCardLayoutHelper.m */,
+				47029F951AD6C7DC004A5934 /* UICollectionView+CardLayout.h */,
+				47029F961AD6C7DC004A5934 /* UICollectionView+CardLayout.m */,
+				47029F971AD6C7DC004A5934 /* UICollectionView+Draggable.h */,
+				47029F981AD6C7DC004A5934 /* UICollectionView+Draggable.m */,
+				47029F991AD6C7DC004A5934 /* UICollectionViewDataSource_Draggable.h */,
+				47029F9A1AD6C7DC004A5934 /* UICollectionViewLayout_Warpable.h */,
+			);
+			name = CardLayout;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		47029F661AD6C7C2004A5934 /* EJCardLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47029F861AD6C7C2004A5934 /* Build configuration list for PBXNativeTarget "EJCardLayout" */;
+			buildPhases = (
+				47029F631AD6C7C2004A5934 /* Sources */,
+				47029F641AD6C7C2004A5934 /* Frameworks */,
+				47029F651AD6C7C2004A5934 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EJCardLayout;
+			productName = EJCardLayout;
+			productReference = 47029F671AD6C7C2004A5934 /* EJCardLayout.app */;
+			productType = "com.apple.product-type.application";
+		};
+		47029F7B1AD6C7C2004A5934 /* EJCardLayoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47029F891AD6C7C2004A5934 /* Build configuration list for PBXNativeTarget "EJCardLayoutTests" */;
+			buildPhases = (
+				47029F781AD6C7C2004A5934 /* Sources */,
+				47029F791AD6C7C2004A5934 /* Frameworks */,
+				47029F7A1AD6C7C2004A5934 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47029F7E1AD6C7C2004A5934 /* PBXTargetDependency */,
+			);
+			name = EJCardLayoutTests;
+			productName = EJCardLayoutTests;
+			productReference = 47029F7C1AD6C7C2004A5934 /* EJCardLayoutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		47029F5F1AD6C7C2004A5934 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Ethan Joe";
+				TargetAttributes = {
+					47029F661AD6C7C2004A5934 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					47029F7B1AD6C7C2004A5934 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 47029F661AD6C7C2004A5934;
+					};
+				};
+			};
+			buildConfigurationList = 47029F621AD6C7C2004A5934 /* Build configuration list for PBXProject "EJCardLayout" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 47029F5E1AD6C7C2004A5934;
+			productRefGroup = 47029F681AD6C7C2004A5934 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				47029F661AD6C7C2004A5934 /* EJCardLayout */,
+				47029F7B1AD6C7C2004A5934 /* EJCardLayoutTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		47029F651AD6C7C2004A5934 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47029FA91AD6C846004A5934 /* Main.storyboard in Resources */,
+				47029F771AD6C7C2004A5934 /* LaunchScreen.xib in Resources */,
+				47029F741AD6C7C2004A5934 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47029F7A1AD6C7C2004A5934 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		47029F631AD6C7C2004A5934 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47029FA71AD6C83A004A5934 /* ViewController.swift in Sources */,
+				47029FA01AD6C7DC004A5934 /* UICollectionView+Draggable.m in Sources */,
+				47029F9C1AD6C7DC004A5934 /* LSCollectionViewLayoutHelper.m in Sources */,
+				47029F6D1AD6C7C2004A5934 /* AppDelegate.swift in Sources */,
+				47029FA61AD6C83A004A5934 /* SearchViewController.swift in Sources */,
+				47029FA51AD6C83A004A5934 /* CardCell.swift in Sources */,
+				47029F9B1AD6C7DC004A5934 /* LSCollectionViewHelper.m in Sources */,
+				47029F9D1AD6C7DC004A5934 /* MTCardLayout.m in Sources */,
+				47029F9F1AD6C7DC004A5934 /* UICollectionView+CardLayout.m in Sources */,
+				47029F9E1AD6C7DC004A5934 /* MTCollectionViewCardLayoutHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47029F781AD6C7C2004A5934 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47029F831AD6C7C2004A5934 /* EJCardLayoutTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		47029F7E1AD6C7C2004A5934 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47029F661AD6C7C2004A5934 /* EJCardLayout */;
+			targetProxy = 47029F7D1AD6C7C2004A5934 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		47029F751AD6C7C2004A5934 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47029F761AD6C7C2004A5934 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		47029F841AD6C7C2004A5934 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		47029F851AD6C7C2004A5934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		47029F871AD6C7C2004A5934 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = EJCardLayout/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EJCardLayout/EJCardLayout-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		47029F881AD6C7C2004A5934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = EJCardLayout/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EJCardLayout/EJCardLayout-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		47029F8A1AD6C7C2004A5934 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EJCardLayoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EJCardLayout.app/EJCardLayout";
+			};
+			name = Debug;
+		};
+		47029F8B1AD6C7C2004A5934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EJCardLayoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EJCardLayout.app/EJCardLayout";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		47029F621AD6C7C2004A5934 /* Build configuration list for PBXProject "EJCardLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47029F841AD6C7C2004A5934 /* Debug */,
+				47029F851AD6C7C2004A5934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47029F861AD6C7C2004A5934 /* Build configuration list for PBXNativeTarget "EJCardLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47029F871AD6C7C2004A5934 /* Debug */,
+				47029F881AD6C7C2004A5934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		47029F891AD6C7C2004A5934 /* Build configuration list for PBXNativeTarget "EJCardLayoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47029F8A1AD6C7C2004A5934 /* Debug */,
+				47029F8B1AD6C7C2004A5934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 47029F5F1AD6C7C2004A5934 /* Project object */;
+}
