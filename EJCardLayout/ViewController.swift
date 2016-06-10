@@ -30,11 +30,11 @@ class ViewController: UICollectionViewController, SearchViewControllerDelegate, 
         self.searchViewController?.delegate = self
         self.collectionView?.backgroundView = self.searchViewController?.view
                 
-        var dropOnToDeleteView: UIImageView = UIImageView(image: UIImage(named: "trashcan"), highlightedImage: (UIImage(named: "trashcan_red")))
+        let dropOnToDeleteView: UIImageView = UIImageView(image: UIImage(named: "trashcan"), highlightedImage: (UIImage(named: "trashcan_red")))
         dropOnToDeleteView.center = CGPointMake(50, 300)
         self.collectionView?.dropOnToDeleteView = dropOnToDeleteView
         
-        var dragUpToDeleteConfirmView: UIImageView = UIImageView(image: UIImage(named: "trashcan"), highlightedImage: (UIImage(named:"trashcan_red")))
+        let dragUpToDeleteConfirmView: UIImageView = UIImageView(image: UIImage(named: "trashcan"), highlightedImage: (UIImage(named:"trashcan_red")))
         self.collectionView?.dragUpToDeleteConfirmView = dragUpToDeleteConfirmView
     }
 
@@ -51,21 +51,21 @@ class ViewController: UICollectionViewController, SearchViewControllerDelegate, 
     
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        var cell: CardCell = collectionView.dequeueReusableCellWithReuseIdentifier("card", forIndexPath: indexPath) as! CardCell
+        let cell: CardCell = collectionView.dequeueReusableCellWithReuseIdentifier("card", forIndexPath: indexPath) as! CardCell
         cell.titleLabel.text = items[indexPath.item] as? String
         return cell
     }
     
     func collectionView(collectionView: UICollectionView!, imageForDraggingItemAtIndexPath indexPath: NSIndexPath!) -> UIImage! {
     
-        var cell: UICollectionViewCell = collectionView.cellForItemAtIndexPath(indexPath)!
+        let cell: UICollectionViewCell = collectionView.cellForItemAtIndexPath(indexPath)!
         var size: CGSize = cell.bounds.size
         size.height = 72.0
         
         UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
-        var context: CGContextRef = UIGraphicsGetCurrentContext()
+        let context: CGContextRef = UIGraphicsGetCurrentContext()!
         cell.layer.renderInContext(context)
-        var image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
         return image
@@ -75,12 +75,12 @@ class ViewController: UICollectionViewController, SearchViewControllerDelegate, 
         return CGAffineTransformMakeScale(1.05, 1.05)
     }
     
-    func collectionView(collectionView: UICollectionView!, canMoveItemAtIndexPath indexPath: NSIndexPath!) -> Bool {
+    override func collectionView(collectionView: UICollectionView, canMoveItemAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }
     
-    func collectionView(collectionView: UICollectionView!, moveItemAtIndexPath fromIndexPath: NSIndexPath!, toIndexPath: NSIndexPath!) {
-        var thing: NSString = items[fromIndexPath.item] as! NSString
+    override func collectionView(collectionView: UICollectionView, moveItemAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
+        let thing: NSString = items[fromIndexPath.item] as! NSString
         self.items.removeObjectAtIndex(fromIndexPath.item)
         self.items.insertObject(thing, atIndex: toIndexPath.item)
     }
@@ -115,8 +115,8 @@ class ViewController: UICollectionViewController, SearchViewControllerDelegate, 
     
 
     @IBAction func flip(sender: UIButton) {
-        let indexPath: AnyObject? = self.collectionView?.indexPathsForSelectedItems().first
-        var cell = self.collectionView?.cellForItemAtIndexPath(indexPath as! NSIndexPath) as! CardCell
+        let indexPath: AnyObject? = self.collectionView?.indexPathsForSelectedItems()!.first
+        let cell = self.collectionView?.cellForItemAtIndexPath(indexPath as! NSIndexPath) as! CardCell
         if (sender == cell.infoButton) {
             cell.flipTransitionWithOptions(UIViewAnimationOptions.TransitionFlipFromLeft, halfway: {(finished: Bool) -> Void in
                 cell.infoButton.hidden = true

@@ -24,7 +24,7 @@ class SearchViewController: UIViewController {
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar){
         self.searchBar.setShowsCancelButton(true, animated: true)
-        var delegate: SearchViewControllerDelegate = self.delegate!
+        let delegate: SearchViewControllerDelegate = self.delegate!
         delegate.searchControllerWillBeginSearch!(self)
     }
     
@@ -34,7 +34,7 @@ class SearchViewController: UIViewController {
     
     func searchBarCancelButtionClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-        var delegate: SearchViewControllerDelegate = self.delegate!
+        let delegate: SearchViewControllerDelegate = self.delegate!
         delegate.searchControllerWillEndSearch!(self)
     }
 }

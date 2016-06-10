@@ -17,7 +17,7 @@ class CardCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        var bounds = self.bounds
+        let bounds = self.bounds
         if(shadowWidth != bounds.size.width) {
             self.layer.masksToBounds = false
             self.layer.shadowColor = UIColor.blackColor().CGColor
@@ -29,17 +29,17 @@ class CardCell: UICollectionViewCell {
         }
     }
 
-    func flipTransitionWithOptions(var options:UIViewAnimationOptions, halfway:((finished: Bool) -> Void)?, completion:((finished: Bool) -> Void)?) {
+    func flipTransitionWithOptions(options:UIViewAnimationOptions, halfway:((finished: Bool) -> Void)?, completion:((finished: Bool) -> Void)?) {
         var degree: CGFloat!
         if(options == UIViewAnimationOptions.TransitionFlipFromRight){
             degree = CGFloat(-M_PI_2)
         } else {
             degree = CGFloat(M_PI_2)
         }
-        var duration: CGFloat = 0.4
-        var distanceZ: CGFloat = 2000
-        var translationZ: CGFloat = self.frame.width / 2
-        var scaleXY: CGFloat = (distanceZ - translationZ) / distanceZ
+        let duration: CGFloat = 0.4
+        let distanceZ: CGFloat = 2000
+        let translationZ: CGFloat = self.frame.width / 2
+        let scaleXY: CGFloat = (distanceZ - translationZ) / distanceZ
         
         var rotationAndPerspectiveTransform: CATransform3D = CATransform3DIdentity
         rotationAndPerspectiveTransform.m34 = 1.0 / (-distanceZ)
