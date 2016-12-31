@@ -13,25 +13,25 @@ class ViewController: UICollectionViewController, SearchViewControllerDelegate, 
     var items =  NSMutableArray()
     var searchViewController: SearchViewController?
     
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.collectionView?.setPresenting(true, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.darkGrayColor()
+        self.view.backgroundColor = UIColor.darkGray
         // Do any additional setup after loading the view, typically from a nib.
         self.items = NSMutableArray(capacity: 20)
         for i in 0...20 {
-            items.addObject("Cell \(i)")
+            items.add("Cell \(i)")
         }
-        self.searchViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SearchViewController") as? SearchViewController
+        self.searchViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController
         
         self.searchViewController?.delegate = self
         self.collectionView?.backgroundView = self.searchViewController?.view
                 
         let dropOnToDeleteView: UIImageView = UIImageView(image: UIImage(named: "trashcan"), highlightedImage: (UIImage(named: "trashcan_red")))
-        dropOnToDeleteView.center = CGPointMake(50, 300)
+        dropOnToDeleteView.center = CGPoint(x: 50, y: 300)
         self.collectionView?.dropOnToDeleteView = dropOnToDeleteView
         
         let dragUpToDeleteConfirmView: UIImageView = UIImageView(image: UIImage(named: "trashcan"), highlightedImage: (UIImage(named:"trashcan_red")))
@@ -45,88 +45,88 @@ class ViewController: UICollectionViewController, SearchViewControllerDelegate, 
     
     // UICollectionViewDatasource
     
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
     
 
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell: CardCell = collectionView.dequeueReusableCellWithReuseIdentifier("card", forIndexPath: indexPath) as! CardCell
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: CardCell = collectionView.dequeueReusableCell(withReuseIdentifier: "card", for: indexPath) as! CardCell
         cell.titleLabel.text = items[indexPath.item] as? String
         return cell
     }
     
-    func collectionView(collectionView: UICollectionView!, imageForDraggingItemAtIndexPath indexPath: NSIndexPath!) -> UIImage! {
+    func collectionView(_ collectionView: UICollectionView!, imageForDraggingItemAt indexPath: IndexPath!) -> UIImage! {
     
-        let cell: UICollectionViewCell = collectionView.cellForItemAtIndexPath(indexPath)!
+        let cell: UICollectionViewCell = collectionView.cellForItem(at: indexPath)!
         var size: CGSize = cell.bounds.size
         size.height = 72.0
         
         UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
-        let context: CGContextRef = UIGraphicsGetCurrentContext()!
-        cell.layer.renderInContext(context)
-        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        let context: CGContext = UIGraphicsGetCurrentContext()!
+        cell.layer.render(in: context)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
         return image
     }
     
-    func collectionView(collectionView: UICollectionView!, transformForDraggingItemAtIndexPath indexPath: NSIndexPath!, duration: UnsafeMutablePointer<NSTimeInterval>) -> CGAffineTransform {
-        return CGAffineTransformMakeScale(1.05, 1.05)
+    func collectionView(_ collectionView: UICollectionView!, transformForDraggingItemAt indexPath: IndexPath!, duration: UnsafeMutablePointer<TimeInterval>) -> CGAffineTransform {
+        return CGAffineTransform(scaleX: 1.05, y: 1.05)
     }
     
-    override func collectionView(collectionView: UICollectionView, canMoveItemAtIndexPath indexPath: NSIndexPath) -> Bool {
+    override func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
         return true
     }
     
-    override func collectionView(collectionView: UICollectionView, moveItemAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, moveItemAt fromIndexPath: IndexPath, to toIndexPath: IndexPath) {
         let thing: NSString = items[fromIndexPath.item] as! NSString
-        self.items.removeObjectAtIndex(fromIndexPath.item)
-        self.items.insertObject(thing, atIndex: toIndexPath.item)
+        self.items.removeObject(at: fromIndexPath.item)
+        self.items.insert(thing, at: toIndexPath.item)
     }
     
-    func collectionView(collectionView: UICollectionView!, didMoveItemAtIndexPath indexPath: NSIndexPath!, toIndexPath: NSIndexPath!) {
+    func collectionView(_ collectionView: UICollectionView!, didMoveItemAt indexPath: IndexPath!, to toIndexPath: IndexPath!) {
         
     }
     
-    func collectionView(collectionView: UICollectionView!, canDeleteItemAtIndexPath indexPath: NSIndexPath!) -> Bool {
+    func collectionView(_ collectionView: UICollectionView!, canDeleteItemAt indexPath: IndexPath!) -> Bool {
         return true
     }
     
-    func collectionView(collectionView: UICollectionView!, deleteItemAtIndexPath indexPath: NSIndexPath!) {
+    func collectionView(_ collectionView: UICollectionView!, deleteItemAt indexPath: IndexPath!) {
         
-        self.items.removeObjectAtIndex(indexPath.item)
+        self.items.removeObject(at: indexPath.item)
     }
 
     
     // SearchCell
     
-    func searchControllerWillBeginSearch(controller: SearchViewController) {
+    func searchControllerWillBeginSearch(_ controller: SearchViewController) {
         if((self.collectionView?.presenting) == nil) {
             self.collectionView?.setPresenting(true, animated: true, completion: nil)
         }
     }
     
-    func searchControllerWillEndSearch(controller: SearchViewController) {
+    func searchControllerWillEndSearch(_ controller: SearchViewController) {
         if((self.collectionView?.presenting) != nil) {
             self.collectionView?.setPresenting(false, animated: true, completion: nil)
         }
     }
     
 
-    @IBAction func flip(sender: UIButton) {
-        let indexPath: AnyObject? = self.collectionView?.indexPathsForSelectedItems()!.first
-        let cell = self.collectionView?.cellForItemAtIndexPath(indexPath as! NSIndexPath) as! CardCell
+    @IBAction func flip(_ sender: UIButton) {
+        let indexPath: AnyObject? = self.collectionView?.indexPathsForSelectedItems!.first as AnyObject?
+        let cell = self.collectionView?.cellForItem(at: indexPath as! IndexPath) as! CardCell
         if (sender == cell.infoButton) {
-            cell.flipTransitionWithOptions(UIViewAnimationOptions.TransitionFlipFromLeft, halfway: {(finished: Bool) -> Void in
-                cell.infoButton.hidden = true
-                cell.doneButton.hidden = false
+            cell.flipTransitionWithOptions(UIViewAnimationOptions.transitionFlipFromLeft, halfway: {(finished: Bool) -> Void in
+                cell.infoButton.isHidden = true
+                cell.doneButton.isHidden = false
                 }, completion: nil)
         }
         if (sender == cell.doneButton) {
-            cell.flipTransitionWithOptions(UIViewAnimationOptions.TransitionFlipFromLeft, halfway: {(finished: Bool) -> Void in
-                cell.infoButton.hidden = false
-                cell.doneButton.hidden = true
+            cell.flipTransitionWithOptions(UIViewAnimationOptions.transitionFlipFromLeft, halfway: {(finished: Bool) -> Void in
+                cell.infoButton.isHidden = false
+                cell.doneButton.isHidden = true
                 }, completion: nil)
         }
     }

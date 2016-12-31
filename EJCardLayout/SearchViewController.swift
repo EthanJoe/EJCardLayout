@@ -14,25 +14,25 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var delegate: SearchViewControllerDelegate?
     
-    func numberOfSectionInTableView(tableView: UITableView) -> (NSInteger) {
+    func numberOfSectionInTableView(_ tableView: UITableView) -> (NSInteger) {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: NSInteger) -> (NSInteger) {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: NSInteger) -> (NSInteger) {
         return 0;
     }
     
-    func searchBarTextDidBeginEditing(searchBar: UISearchBar){
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar){
         self.searchBar.setShowsCancelButton(true, animated: true)
         let delegate: SearchViewControllerDelegate = self.delegate!
         delegate.searchControllerWillBeginSearch!(self)
     }
     
-    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         searchBar.setShowsCancelButton(false, animated: true)
     }
     
-    func searchBarCancelButtionClicked(searchBar: UISearchBar) {
+    func searchBarCancelButtionClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         let delegate: SearchViewControllerDelegate = self.delegate!
         delegate.searchControllerWillEndSearch!(self)
@@ -40,6 +40,6 @@ class SearchViewController: UIViewController {
 }
 
 @objc protocol SearchViewControllerDelegate {
-    optional func searchControllerWillBeginSearch(controller: SearchViewController)
-    optional func searchControllerWillEndSearch(controller: SearchViewController)
+    @objc optional func searchControllerWillBeginSearch(_ controller: SearchViewController)
+    @objc optional func searchControllerWillEndSearch(_ controller: SearchViewController)
 }
