@@ -32,9 +32,9 @@ class CardCell: UICollectionViewCell {
     func flipTransitionWithOptions(_ options:UIViewAnimationOptions, halfway:((_ finished: Bool) -> Void)?, completion:((_ finished: Bool) -> Void)?) {
         var degree: CGFloat!
         if(options == UIViewAnimationOptions.transitionFlipFromRight){
-            degree = CGFloat(-M_PI_2)
+            degree = CGFloat(-Double.pi / 2)
         } else {
-            degree = CGFloat(M_PI_2)
+            degree = CGFloat(Double.pi)
         }
         let duration: CGFloat = 0.4
         let distanceZ: CGFloat = 2000

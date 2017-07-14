@@ -48,7 +48,6 @@ class ViewController: UICollectionViewController, SearchViewControllerDelegate, 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
-    
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: CardCell = collectionView.dequeueReusableCell(withReuseIdentifier: "card", for: indexPath) as! CardCell
@@ -113,7 +112,6 @@ class ViewController: UICollectionViewController, SearchViewControllerDelegate, 
         }
     }
     
-
     @IBAction func flip(_ sender: UIButton) {
         let indexPath: AnyObject? = self.collectionView?.indexPathsForSelectedItems!.first as AnyObject?
         let cell = self.collectionView?.cellForItem(at: indexPath as! IndexPath) as! CardCell

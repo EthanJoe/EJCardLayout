@@ -59,7 +59,7 @@ static const char * MTCollectionViewCardLayoutHelperKey = "UICollectionViewCardL
 
 - (void)setPresenting:(BOOL)presenting animated:(BOOL)animated completion:(void (^)(BOOL))completion
 {
-    void (^setPresenting)() = ^{
+    void (^setPresenting)(void) = ^{
         [self getCardLayoutHelper].presenting = presenting;
         self.scrollEnabled = !presenting;
         
